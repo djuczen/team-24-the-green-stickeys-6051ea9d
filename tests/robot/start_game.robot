@@ -6,8 +6,8 @@ Library           StartGameLibrary.py
 *** Test Cases ***      numPositions     startingPositionX    startingPositionY  startingMoveCount
 Blank character name    100              0                    0                  0
 CowboyHank              100              0                    0                  20
-CowboyHank              100              0                    0                  50
-CowboyHank              100              0                    0                  1
+CowboyHanks             100              0                    0                  50
+CowboyHanky             100              0                    0                  1
 DonkeyFace              100              0                    0                  10
 Jasonheadf              100              5                    5                  15
 Carplond                100              9                    9                  1
