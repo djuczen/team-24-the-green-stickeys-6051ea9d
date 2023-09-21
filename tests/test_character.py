@@ -22,3 +22,9 @@ class TestCharacterEnterMap(TestCase):
         testobj = Character(ARBITRARY_NAME)
         testobj.enter_map(GameMap())
         self.assertNotEqual(None, testobj.map)
+
+class TestCharacterGetPositition(TestCase):
+    def test_init(self):
+        ARBITRARY_NAME = ""
+        testobj = Character(ARBITRARY_NAME)
+        self.assertNotEqual(None, testobj.position)
