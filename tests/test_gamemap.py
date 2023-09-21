@@ -5,8 +5,8 @@ from levelup.gamemap import GameMap
 
 class TestGetPositions(TestCase):
     def test_init(self):
-        ARBITRARY_NAME = "WhoDat"
-        testobj = Character(ARBITRARY_NAME)
+        num_positions = 100
+        testobj = Position(num_positions)
         self.assertNotEqual(None, testobj.map)
 
 #test for 100 positions
