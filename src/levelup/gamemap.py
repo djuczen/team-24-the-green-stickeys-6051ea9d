@@ -14,15 +14,13 @@ class GameMap:
 
     def calculate_position(self, startpos, movement):
         grid_size = int(math.sqrt(self.num_positions))
-        match movement:
-            case 'n':
-                return self.positions[startpos.y + 1 if startpos.y < grid_size else startpos.y][startpos.x]
-            case 's':
-                return self.positions[startpos.y - 1 if startpos.y > 0 else startpos.y][startpos.x]
-            case 'e':
-                return self.positions[startpos.y][startpos.x + 1 if startpos.x < grid_size else startpos.x]
-            case 'w':
-                return self.positions[startpos.y][startpos.x - 1 if startpos.x > 0 else startpos.x]
-            case _:
-                return self.positions[startpos.y][startpos.x]
-
+        if movement == 'n':
+            return self.positions[startpos.y + 1 if startpos.y < grid_size else startpos.y][startpos.x]
+        elif movement == 's':
+            return self.positions[startpos.y - 1 if startpos.y > 0 else startpos.y][startpos.x]
+        elif movement == 'e':
+            return self.positions[startpos.y][startpos.x + 1 if startpos.x < grid_size else startpos.x]
+        elif movement == 'w':
+            return self.positions[startpos.y][startpos.x - 1 if startpos.x > 0 else startpos.x]
+        else :
+            return self.positions[startpos.y][startpos.x]
