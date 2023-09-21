@@ -27,7 +27,7 @@ class TestWalls(TestCase):
     def test_init(self):
         testobj = GameMap(100)
         direction = 's'
-        startpos = testobj.positions[0][5]
+        startpos = testobj.positions[1][5]
         endpos = testobj.calculate_position(startpos, direction)
         self.assertEquals(endpos.x , 5)
         self.assertEquals(endpos.y , 0)

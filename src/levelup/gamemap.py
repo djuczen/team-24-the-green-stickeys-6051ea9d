@@ -24,4 +24,4 @@ class GameMap:
                 return self.positions[startpos.y] [startpos.x -1]
             case _:
                 return self.positions[startpos.y][startpos.x]
-        return startpos
+
