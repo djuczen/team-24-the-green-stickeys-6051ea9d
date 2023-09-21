@@ -13,6 +13,24 @@ class TestPositions(TestCase):
     def test_init(self):
         testobj = GameMap(100)
         self.assertNotEqual(None, testobj.positions)
-#test for 100 positions
+
+class TestCalculatePositionBasedOnDirection(TestCase):
+    def test_init(self):
+        testobj = GameMap(100)
+        direction = 'n'
+        startpos = testobj.positions[4][5]
+        endpos = testobj.calculate_position(startpos, direction)
+        self.assertEquals(endpos.x , 5)
+        self.assertEquals(endpos.y , 5)
+
+class TestWalls(TestCase):
+    def test_init(self):
+        testobj = GameMap(100)
+        direction = 's'
+        startpos = testobj.positions[0][5]
+        endpos = testobj.calculate_position(startpos, direction)
+        self.assertEquals(endpos.x , 5)
+        self.assertEquals(endpos.y , 0)
+
 #calculate position based on direction entered
 #valid position?
