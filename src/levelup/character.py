@@ -1,4 +1,4 @@
-from docutils.utils.math.math2html import Position
+from levelup.position import Position
 
 
 class Character:
@@ -12,3 +12,6 @@ class Character:
 
     def enter_map(self, m):
         self.map = m
+
+    def move(self,direction):
+        return direction

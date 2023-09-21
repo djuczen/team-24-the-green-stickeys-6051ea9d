@@ -28,3 +28,9 @@ class TestCharacterGetPositition(TestCase):
         ARBITRARY_NAME = ""
         testobj = Character(ARBITRARY_NAME)
         self.assertNotEqual(None, testobj.position)
+
+class TestCharacterMove(TestCase):
+    def test_init(self):
+        ARBITRARY_NAME = ""
+        testobj = Character(ARBITRARY_NAME)
+        self.assertNotEqual(None, testobj.move("n"))
