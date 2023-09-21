@@ -1,2 +1,7 @@
+from dataclasses import dataclass
+
+
+@dataclass
 class GameMap:
-    pass
+    num_positions: int = 100
+
