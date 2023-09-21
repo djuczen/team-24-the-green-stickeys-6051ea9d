@@ -1,2 +1,7 @@
+from dataclasses import dataclass
+from levelup import Position
+
+@dataclass
 class GameMap:
-    pass
+    num_positions: int = 100
+    position: list[list[Position]]
