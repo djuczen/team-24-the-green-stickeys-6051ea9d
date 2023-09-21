@@ -1,11 +1,12 @@
 import math
 from dataclasses import dataclass
 from levelup.position import Position
+from typing import List
 
 @dataclass
 class GameMap:
     num_positions: int = 100
-    positions: list[list[Position]] = None
+    positions: List[List[Position]] = None
 
     def __post_init__(self):
         grid_size = int(math.sqrt(self.num_positions))
