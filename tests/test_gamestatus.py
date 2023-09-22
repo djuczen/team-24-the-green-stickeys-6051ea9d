@@ -8,7 +8,7 @@ class TestCharacterNamein(TestCase):
         ARBITRARY_NAME = ""
         testobj = GameStatus(character_name=ARBITRARY_NAME)
         self.assertEqual(ARBITRARY_NAME, testobj.character_name)
-        self.assertEqual((-100,-100), testobj.current_position)
+        self.assertEqual((None), testobj.current_position)
         self.assertEqual(0,testobj.move_count)
 
 
