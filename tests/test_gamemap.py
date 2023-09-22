@@ -31,7 +31,3 @@ class TestWalls(TestCase):
         endpos = testobj.calculate_position(startpos, direction)
         self.assertEquals(endpos.y, 4)
         self.assertEquals(endpos.x , 9)
-
-
-#calculate position based on direction entered
-#valid position?
