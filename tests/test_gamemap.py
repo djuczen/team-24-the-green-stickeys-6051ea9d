@@ -26,11 +26,12 @@ class TestCalculatePositionBasedOnDirection(TestCase):
 class TestWalls(TestCase):
     def test_init(self):
         testobj = GameMap(100)
-        direction = 'n'
-        startpos = testobj.positions[6][5]
+        direction = 'e'
+        startpos = testobj.positions[4][9]
         endpos = testobj.calculate_position(startpos, direction)
-        self.assertEquals(endpos.x , 5)
-        self.assertEquals(endpos.y , 7)
+        self.assertEquals(endpos.y, 4)
+        self.assertEquals(endpos.x , 9)
+
 
 #calculate position based on direction entered
 #valid position?
