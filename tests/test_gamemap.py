@@ -31,3 +31,10 @@ class TestWalls(TestCase):
         endpos = testobj.calculate_position(startpos, direction)
         self.assertEquals(endpos.y, 4)
         self.assertEquals(endpos.x , 9)
+
+class TestStartPosition(TestCase):
+    def test_init(self):
+        testobj = GameMap(100)
+        enter_position1 = testobj.start_position()
+        enter_position2 = testobj.start_position()
+        self.assertNotEquals(enter_position1,enter_position2)

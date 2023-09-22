@@ -1,5 +1,7 @@
 import math
 from dataclasses import dataclass
+from random import random
+
 from levelup.position import Position
 from typing import List
 
@@ -24,3 +26,8 @@ class GameMap:
             return self.positions[startpos.y][startpos.x - 1 if startpos.x > 0 else startpos.x]
         else :
             return self.positions[startpos.y][startpos.x]
+
+    def start_position(self):
+        startposy = (int(random() * (self.grid_size - 1)))
+        startposx = (int(random() * (self.grid_size - 1)))
+        return self.positions[startposy][startposx]
