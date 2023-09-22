@@ -1,9 +1,9 @@
 from levelup.position import Position
-
+from levelup.gamemap  import GameMap
 
 class Character:
     name = ""
-    map = None
+    game_map = None
     position = None
 
     def __init__(self, character_name):
@@ -11,7 +11,13 @@ class Character:
         self.position = Position(0,0)
 
     def enter_map(self, m):
-        self.map = m
+        self.game_map = m
+        self.position = m.start_position()
 
     def move(self,direction):
-        return direction
+        current_position = self.position
+        new_position = self.game_map.calculate_position(current_position, direction)
+        if new_position == current_position:
+            raise InvalidMoveException
+        else:
+            self.position = new_position

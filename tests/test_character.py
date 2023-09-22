@@ -21,7 +21,7 @@ class TestCharacterEnterMap(TestCase):
         ARBITRARY_NAME = ""
         testobj = Character(ARBITRARY_NAME)
         testobj.enter_map(GameMap())
-        self.assertNotEqual(None, testobj.map)
+        self.assertNotEqual(None, testobj.game_map)
 
 class TestCharacterGetPositition(TestCase):
     def test_init(self):
@@ -33,4 +33,7 @@ class TestCharacterMove(TestCase):
     def test_init(self):
         ARBITRARY_NAME = ""
         testobj = Character(ARBITRARY_NAME)
-        self.assertNotEqual(None, testobj.move("n"))
+        testobj.enter_map(GameMap())
+        current_position = testobj.position
+        testobj.move("n")
+        self.assertNotEqual(current_position,testobj.position)
